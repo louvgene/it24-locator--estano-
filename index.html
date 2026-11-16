@@ -1,24 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>City Locator</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Find a city using this locator</h1>
-    <form id="searchForm">
-      <label for="cityInput">City name</label>
-      <input id="cityInput" type="search" placeholder="Try Manila" required />
-      <button type="submit">Search</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PH City Explorer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>PH City Explorer</h1>
+    <form id="search-form">
+      <input id="query" type="text" placeholder="Search a Philippine city, e.g. Cebu" autocomplete="off" required />
+      <button id="search-btn" type="submit">Search</button>
     </form>
-    <p id="status" role="status"></p>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
-  </body>
+    <p id="message" role="status" aria-live="polite">Type a city name to see it on the map.</p>
+  </header>
+
+  <div id="map"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
